@@ -1,0 +1,543 @@
+/*---------------Header------------------------------*/
+.navbar {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10000000149011612);
+    height: 65px;
+}
+
+.navbar-nav {
+    --bs-navbar-color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.navbar .nav-item:hover .nav-link {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #a8da9d;
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #a8da9d;
+    text-decoration-thickness: 2px;
+    font-weight: 400;
+
+}
+
+.logo-img-header {
+    width: 75px;
+    height: 42px;
+    margin-left: 50px;
+}
+
+.p-2.menu {
+    margin-right: 500px;
+}
+
+.btn {
+    --bs-btn-bg: background-color:rgba(255, 255, 255, 0);
+    --bs-btn-color: rgba(0, 0, 0, 1);
+    --bs-btn-border-color: rgba(156.00000590085983, 213.00000250339508, 144.00000661611557, 1);
+    --bs-btn-hover-bg: #a8da9d;
+    --bs-btn-hover-border-color: #a8da9d;
+    --bs-btn-active-bg: #a8da9d;
+    --bs-btn-active-border-color: #a8da9d;
+    --bs-btn-border-radius: 100px;
+    --bs-btn-line-height: 0.90;
+    --bs-btn-border-width: 1.5px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    padding: 8px 0;
+    height: 33px;
+    width: 90px;
+}
+
+.p-2.logout-btn {
+    margin-top: 5px;
+    margin-right: 80px;
+}
+
+/*--------Main content-----------*/
+/*First row - edit text*/
+.form-control::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+.p-2.edit-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    margin-right: 530px;
+}
+
+.p-2.hepl-icon {
+    margin-left: 500px;
+}
+
+svg.bi.bi-question-circle {
+    margin-bottom: 30px;
+}
+
+.p-2.help-btns a {
+    display: flex;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+/*---------Edit menu card-----------------------*/
+div.p-2.menu-edit {
+    margin-left: 40px;
+}
+
+div.edit-menu-header-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+div.card.menu {
+    border-color: #9CD590;
+    border-radius: 10px;
+    width: 484px;
+    --bs-card-height: 296px;
+}
+
+div.card-body {
+    padding-top: 0;
+}
+
+svg.bi.bi-eye-fill {
+    color: #E7E7E7;
+    margin-left: 451px;
+    margin-top: 10px;
+    height: 16px !important;
+    width: 16px !important;
+}
+
+div.fields {
+    margin-bottom: 10px;
+}
+
+div.menu-input-lb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+input.form-control {
+    width: 451px;
+    height: 32px;
+    background-color: #F5F5F5;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 300;
+}
+
+a.btn.btn-primary.save-btn {
+    background-color: #9CD590;
+    color: #FFFFFF;
+    width: 86px;
+    height: 33px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    float: right;
+
+}
+
+/*-------------Add category card---------------------*/
+div.p-2.add-category {
+    margin-right: 170px;
+}
+
+div.card.add-category {
+    border-color: #9CD590;
+    border-radius: 10px;
+    width: 484px;
+    --bs-card-height: 296px;
+}
+
+div.card.add-category img {
+    width: 483px;
+    height: 109px;
+}
+
+label.menu-input-lb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px;
+    width: 500px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-input-photo {
+    width: 194px;
+    height: 32px;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+svg.img-add-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 30px;
+}
+
+div.add-more-cat {
+    display: inline;
+}
+
+div.add-more-cat-btn {
+    display: inline;
+}
+
+.btn.add-cat {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #777777;
+    font-weight: 400;
+    margin-top: 10px;
+    width: 200px;
+
+}
+
+a.btn.btn-cat {
+    background-color: #9CD590;
+    color: #FFFFFF;
+    width: 86px;
+    height: 33px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    float: right;
+    margin-top: 10px;
+
+}
+
+/*----------Line-----------------*/
+div.p-2.hr {
+    width: 90%;
+}
+
+div.p-2.hr hr {
+    margin-right: 260px;
+    margin-left: 20px;
+
+}
+
+hr.line-divider {
+    color: #D9D9D9;
+    border-top: 2px solid;
+}
+
+/*-------Edit category text------------*/
+.p-2.edit-cat-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-right: 690px;
+}
+
+/*----------Edit category 1------*/
+.card.category1 {
+    border-radius: 10px;
+    flex-direction: row;
+    width: 1095.9px;
+    height: 325px;
+    margin-left: 28px;
+    border-color: #9CD590;
+    margin-bottom: 20px;
+    height: 671px;
+}
+
+.card-img-top-cat1 {
+    border-radius: 10px 0 20px 0;
+    width: 315px;
+    height: 196.07px;
+}
+
+div.cat1-main-body {
+    flex-direction: column;
+}
+
+div.cat1-edit-fields {
+    margin-left: 10px;
+}
+
+.form-control.cat1-edit {
+    width: 279px;
+    height: 30px;
+}
+
+.custom-input-photo.cat1 {
+    width: 279px;
+    height: 30px;
+}
+
+.custom-input-photo.cat1 svg {
+    margin-left: 100px;
+}
+
+.img-recommendation.cat1 {
+    width: 279px;
+    margin: 0 0;
+}
+
+
+a.btn.btn-cat1 {
+    background-color: #9CD590;
+    color: #FFFFFF;
+    width: 86px;
+    height: 33px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    float: right;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+.vr.cat1 {
+    height: 394px;
+    margin-top: 240px;
+    width: 1.5px;
+
+}
+
+.card.editing-product {
+    width: 664px;
+    height: 460.23px;
+    border-color: #9CD590;
+    border-radius: 10px;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.card-img-top.product1 {
+    width: 232px;
+    height: 142px;
+    border-radius: 10px 0 20px 0;
+}
+
+.custom-input-photo.product1 {
+    width: 209px;
+    height: 30px;
+}
+
+.img-recommendation.prod {
+    margin-bottom: 10px;
+}
+
+.form-control.product-desc {
+    width: 380px;
+    height: 346px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #60BC4E;
+}
+
+.card.product.cat1 {
+    height: 94.4px;
+    width: 664px;
+}
+
+.vr.product {
+    height: 268px;
+    padding: 0.5px;
+    margin-top: 160px;
+}
+
+/*----------Edit category 2------*/
+.card.category2 {
+    border-radius: 10px;
+    flex-direction: row;
+    width: 1095.9px;
+    height: 325px;
+    margin-left: 28px;
+    border-color: #9CD590;
+}
+
+img.card-img-top-cat {
+    width: 306.78px;
+    height: 325px;
+}
+
+/*----------Edit category 2 Part1-----*/
+div.card-body.cat2-part1 {
+    width: 258px;
+    height: 325px;
+}
+
+.fields.cat2-edit {
+    width: 207px;
+}
+
+.form-control.cat2-edit {
+    width: 207px;
+}
+
+label.menu-input-lb {
+    width: 211px;
+}
+
+div.img-recommendation {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #777777;
+    margin-left: 10px;
+}
+
+div.img-recommendation.px {
+    margin-top: 5px;
+}
+
+.cat-add-photo {
+    width: 211px;
+}
+
+.custom-input-photo.cat2 {
+    width: 211px;
+}
+
+.vr {
+    color: #D9D9D9;
+    height: 324px;
+    width: 2px;
+}
+
+/*----------Edit category 2 Part2-----*/
+.div.card-body.cat2-part2 {
+    width: 484px;
+    height: 325px;
+}
+
+div.products-lb {
+    display: inline;
+    font-size: 20px;
+}
+
+
+.card.product {
+    width: 420px;
+    height: 75px;
+    flex-direction: row;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: #F3F3F3;
+    border-color: #9CD590;
+    border-radius: 10px;
+}
+
+.card-img-top-pr {
+    border-radius: 10px 0 0 10px;
+}
+
+.cat-product-name {
+    display: inline;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.cat-product-availability {
+    color: #60BC4E;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.buttons-product {
+    display: inline;
+    float: right;
+}
+
+.buttons-product button {
+    margin: 3px;
+}
+
+.btn-circle-up-down {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    background-color: #494949;
+    border: none;
+}
+
+.btn-circle-edit {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    padding: 0 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    background-color: #9CD590;
+    border: none;
+}
+
+.btn-circle-delete {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    padding: 0 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    background-color: #FF003C;
+    border: none;
+}
+
+/*----------Footer---------------*/
+.footer {
+    width: 100%;
+    height: 105px;
+    background-color: #FF003C;
+}
+
+div.d-flex.footer-container {
+    margin-top: 10px;
+}
+
+div.menu-footer {
+    margin-right: 122px;
+}
+
+div.p-2.menu-footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+div.p-2.copyright-txt {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}

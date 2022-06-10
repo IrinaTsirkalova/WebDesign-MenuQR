@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MenuQR</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <!--CSS -->
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <!--Навигационно меню-->
+  <nav class="navbar navbar-expand-lg">
+    <div class="d-flex flex-row justify-content-around flex-grow-1">
+      <div class="p-2 ">
+        <img class="logo-img-header" src="logo-header.png" alt="Logo">
+      </div>
+      <div class="p-2 menu ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Начало</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#restaurants">Ресторанти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#menus">Менюта</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#payments">Сметки</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-2 logout-btn">
+        <button type="button" class="btn btn-success">Изход</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!--Main content-->
+  <div class="main-content">
+    <!--Редактиране текст-->
+    <div class="d-flex flex-row justify-content-around  flex-grow-1">
+      <div class="p-2 edit-txt">Редактиране <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+          <path
+            d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+        </svg></div>
+      <div class="p-2 "></div>
+      <div class="p-2 help-btns">
+        <a href="#help" class="side-btn">Помощ</a>
+        <a href="#video" class="side-btn">Видео</a>
+      </div>
+    </div>
+
+    <!--Картички меню и категория добавяне-->
+    <div class="d-flex flex-row justify-content-around flex-grow-1">
+
+      <!--Редактиране на меню картичка-->
+      <div class="p-2 menu-edit">
+        <div class="edit-menu-header-txt">Редактиране на меню</div>
+        <div class="card menu">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <div class="fields">
+              <div class="menu-input-lb">Име</div>
+              <input type="text" class="form-control" id="inputName" placeholder="Вашето меню">
+            </div>
+            <div class="fields">
+              <div class="menu-input-lb">Език</div>
+              <input type="text" class="form-control" id="inputLanguage" placeholder="Български">
+            </div>
+            <div class="fields">
+              <div class="menu-input-lb">Ресторант/име/</div>
+              <input type="text" class="form-control" id="inputRestaurantName" placeholder="Рафи">
+            </div>
+            <a href="#" class="btn btn-primary save-btn">Запази</a>
+          </div>
+        </div>
+      </div>
+      <!--Добавяне на категория-->
+      <div class="p-2 add-category ">
+        <div class="edit-menu-header-txt">Добавяне на катефория</div>
+        <div class="card add-category">
+          <img src="category-img.png" class="card-img-top" alt="Изображение на категорията">
+          <div class="card-body">
+            <div class="fields">
+              <div class="menu-input-lb">Име</div>
+              <input type="text" class="form-control" id="inputNameCat" placeholder="Въведете име на категорията">
+            </div>
+            <div>
+              <div class="cat-add-photo">
+                <label for="formFile" class="menu-input-lb">Изображение</label>
+                <label class="custom-input-photo">
+                  Добави снимка
+                  <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon" aria-hidden="true" role="img"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="#777"
+                      d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                  </svg>
+                  <input id="file-upload" type="file" />
+                </label>
+              </div>
+            </div>
+            <div class="add-more-cat-btn">
+              <a class="btn add-cat">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                </svg>
+                Добави още категории</a>
+            </div>
+            <a href="#" class="btn btn-primary btn-cat">Добави</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="p-2"></div>
+    </div>
+
+    <!--Разделителна черта-->
+    <div class="d-flex flex-row justify-content-around flex-grow-1">
+      <div class="p-2"> </div>
+      <div class="p-2 hr">
+        <hr class="line-divider">
+      </div>
+      <div class="p-2"> </div>
+    </div>
+
+
+    <!--Категории-->
+    <!--Заглавие редактиране на категория -->
+    <div class="d-flex flex-row   justify-content-around flex-grow-1">
+      <div class="p-2 edit-cat-txt">Редактиране на категория</div>
+      <div class="p-2"> </div>
+      <div class="p-2"> </div>
+    </div>
+    <!--Редактиране на категория 1-->
+    <div class="d-flex flex-row justify-content-around flex-grow-1">
+      <div class="p-2">
+        <div class="card category1">
+          <div class="cat1-main-body">
+            <img class="card-img-top-cat1" src="edit-cat1-photo1.png" alt="Card image cap">
+            <div class="cat1-edit-fields">
+              <div class="fields cat1-edit">
+                <div class="menu-input-lb">Име</div>
+                <input type="text" class="form-control cat1-edit" id="inputNameCat" placeholder="Основни">
+              </div>
+              <div class="cat-add-photo">
+                <label for="formFile" class="menu-input-lb">Изображение</label>
+                <label class="custom-input-photo cat1">
+                  Смени снимката
+                  <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="#777"
+                      d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                  </svg>
+                  <input id="file-upload" type="file" />
+                </label>
+                <div class="img-recommendation cat1">*Препоръчителен размер на снимката 1000px x 200px</div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-cat1">Запази</a>
+          </div>
+
+          <div class="vr cat1"></div>
+
+          <div class="card-body">
+
+            <div class="products-lb">
+              <div class="menu-input-lb products-lb">Продукти</div>
+              <a href="#" class="btn btn-primary btn-cat">Добави</a>
+            </div>
+
+            <div class="card editing-product">
+              <div class="product1-main-body">
+                <img class="card-img-top product1" src="edit-cat1-photo2.png" alt="Card image cap">
+                <div class="card-body cat2-part1">
+
+                  <div class="fields cat2-edit">
+                    <div class="menu-input-lb">Име</div>
+                    <input type="text" class="form-control cat2-edit" id="inputNameCat"
+                      placeholder="Пиле &quot;Фантазия&quot;">
+                  </div>
+
+                  <div class="cat-add-photo">
+                    <label for="formFile" class="menu-input-lb">Изображение</label>
+                    <label class="custom-input-photo product1">
+                      Смени снимката
+                      <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
+                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="#777"
+                          d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                      </svg>
+                      <input id="file-upload" type="file" />
+                    </label>
+                    <div class="img-recommendation cat1">*Опционално</div>
+                  </div>
+
+                  <div class="fields cat2-edit">
+                    <div class="menu-input-lb">Цена/в лв./</div>
+                    <input type="number" class="form-control cat2-edit" id="inputNameCat" placeholder="15.00">
+                  </div>
+
+                  <div class="fields cat2-edit">
+                    <div class="menu-input-lb">Количество/в гр./</div>
+                    <input type="text" class="form-control cat2-edit" id="inputNameCat" placeholder="250">
+                    <div class="img-recommendation cat1">*Опционално</div>
+                  </div>
+                </div>
+              </div>
+              <div class="vr product"></div>
+              <div class="card-body product-edit1">
+                <div class="cat-product-availability">Наличен в менюто</div>
+                <div class="buttons-product">
+                  <button type="button" class="btn btn-default btn-circle-edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="23.15"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="white" d="M9 16.2L4.8 12l-1.4 1.4L9 19L21 7l-1.4-1.4L9 16.2z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-default btn-circle-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 28 28">
+                      <path fill="white"
+                        d="M11.5 6h5a2.5 2.5 0 0 0-5 0ZM10 6a4 4 0 0 1 8 0h6.25a.75.75 0 0 1 0 1.5h-1.31l-1.217 14.603A4.25 4.25 0 0 1 17.488 26h-6.976a4.25 4.25 0 0 1-4.235-3.897L5.06 7.5H3.75a.75.75 0 0 1 0-1.5H10ZM7.772 21.978a2.75 2.75 0 0 0 2.74 2.522h6.976a2.75 2.75 0 0 0 2.74-2.522L21.436 7.5H6.565l1.207 14.478ZM11.75 11a.75.75 0 0 1 .75.75v8.5a.75.75 0 0 1-1.5 0v-8.5a.75.75 0 0 1 .75-.75Zm5.25.75a.75.75 0 0 0-1.5 0v8.5a.75.75 0 0 0 1.5 0v-8.5Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu-input-lb">Описание:</div>
+                <div class="img-recommendation prod">*Опционално</div>
+                <div class="form-group">
+                  <textarea class="form-control product-desc" rows="5" id="comment"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="card product cat1">
+              <img class="card-img-top-pr" src="edit-cat1-photo3.png" alt="Product image">
+              <div class="card-body">
+                <div class="cat-product-name">Тестов продукт</div>
+
+                <div class="buttons-product">
+                  <button type="button" class="btn btn-default btn-circle-up-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                      <path fill="white" fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-default btn-circle-up-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                      <g transform="translate(0 16) scale(1 -1)">
+                        <path fill="white" fill-rule="evenodd"
+                          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                      </g>
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-default btn-circle-edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14.15" height="15.29"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                      <path fill="white"
+                        d="M2 26h28v2H2zM25.4 9c.8-.8.8-2 0-2.8l-3.6-3.6c-.8-.8-2-.8-2.8 0l-15 15V24h6.4l15-15zm-5-5L24 7.6l-3 3L17.4 7l3-3zM6 22v-3.6l10-10l3.6 3.6l-10 10H6z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-default btn-circle-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 28 28">
+                      <path fill="white"
+                        d="M11.5 6h5a2.5 2.5 0 0 0-5 0ZM10 6a4 4 0 0 1 8 0h6.25a.75.75 0 0 1 0 1.5h-1.31l-1.217 14.603A4.25 4.25 0 0 1 17.488 26h-6.976a4.25 4.25 0 0 1-4.235-3.897L5.06 7.5H3.75a.75.75 0 0 1 0-1.5H10ZM7.772 21.978a2.75 2.75 0 0 0 2.74 2.522h6.976a2.75 2.75 0 0 0 2.74-2.522L21.436 7.5H6.565l1.207 14.478ZM11.75 11a.75.75 0 0 1 .75.75v8.5a.75.75 0 0 1-1.5 0v-8.5a.75.75 0 0 1 .75-.75Zm5.25.75a.75.75 0 0 0-1.5 0v8.5a.75.75 0 0 0 1.5 0v-8.5Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="cat-product-availability">Наличен в менюто</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-2"></div>
+      <div class="p-2"></div>
+    </div>
+    <!--Редактиране на категория 2-->
+    <div class="d-flex flex-row justify-content-around flex-grow-1">
+      <div class="p-2">
+        <div class="card category2">
+          <img class="card-img-top-cat" src="edit-cat2-img1.png" alt="Category image">
+          <div class="card-body cat2-part1">
+
+            <div class="fields cat2-edit">
+              <div class="menu-input-lb">Име</div>
+              <input type="text" class="form-control cat2-edit" id="inputNameCat" placeholder="Десерти">
+            </div>
+
+            <div class="cat-add-photo">
+              <label for="formFile" class="menu-input-lb">Изображение</label>
+              <label class="custom-input-photo cat2">
+                Смени снимката
+                <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
+                  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                  <path fill="#777"
+                    d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                </svg>
+                <input id="file-upload" type="file" />
+              </label>
+              <div class="img-recommendation">*Препоръчителен размер на снимката</div>
+              <div class="img-recommendation px">1000px x 200px</div>
+              <a href="#" class="btn btn-primary btn-cat">Запази</a>
+            </div>
+
+          </div>
+          <div class="vr"></div>
+          <div class="card-body cat2-part2">
+            <div class="products-lb">
+              <div class="menu-input-lb products-lb">Продукти</div>
+              <a href="#" class="btn btn-primary btn-cat">Добави</a>
+            </div>
+
+            <div class="card product">
+              <img class="card-img-top-pr" src="cat2-pr1.png" alt="Product image">
+              <div class="card-body">
+                <div class="cat-product-name">Тирамису</div>
+
+                <div class="buttons-product">
+                  <button type="button" class="btn btn-default btn-circle-up-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                      <path fill="white" fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-default btn-circle-up-down">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+                      <g transform="translate(0 16) scale(1 -1)">
+                        <path fill="white" fill-rule="evenodd"
+                          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                      </g>
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-default btn-circle-edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14.15" height="15.29"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                      <path fill="white"
+                        d="M2 26h28v2H2zM25.4 9c.8-.8.8-2 0-2.8l-3.6-3.6c-.8-.8-2-.8-2.8 0l-15 15V24h6.4l15-15zm-5-5L24 7.6l-3 3L17.4 7l3-3zM6 22v-3.6l10-10l3.6 3.6l-10 10H6z" />
+                    </svg>
+                  </button>
+                  <button type="button" class="btn btn-default btn-circle-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 28 28">
+                      <path fill="white"
+                        d="M11.5 6h5a2.5 2.5 0 0 0-5 0ZM10 6a4 4 0 0 1 8 0h6.25a.75.75 0 0 1 0 1.5h-1.31l-1.217 14.603A4.25 4.25 0 0 1 17.488 26h-6.976a4.25 4.25 0 0 1-4.235-3.897L5.06 7.5H3.75a.75.75 0 0 1 0-1.5H10ZM7.772 21.978a2.75 2.75 0 0 0 2.74 2.522h6.976a2.75 2.75 0 0 0 2.74-2.522L21.436 7.5H6.565l1.207 14.478ZM11.75 11a.75.75 0 0 1 .75.75v8.5a.75.75 0 0 1-1.5 0v-8.5a.75.75 0 0 1 .75-.75Zm5.25.75a.75.75 0 0 0-1.5 0v8.5a.75.75 0 0 0 1.5 0v-8.5Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="cat-product-availability">Наличен в менюто</div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="p-2"> </div>
+      <div class="p-2"> </div>
+
+    </div>
+  </div>
+  <!------Footer-------->
+  <footer class="footer">
+    <div class="d-flex footer-container flex-row justify-content-around  flex-grow-1">
+      <div class="p-2 ">
+        <img class="logo-img-header" src="logo-footer.png" alt="Logo">
+      </div>
+      <div class="p-2 menu-footer">
+        <a href="#home">Начало</a>
+        <a href="#restaurants">Ресторанти</a>
+        <a href="#menus">Менюта</a>
+        <a href="#payments">Сметки</a>
+      </div>
+      <div class="p-2 copyright-txt">
+        &copy; 2022 QRMENU Всички права запазени
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>
