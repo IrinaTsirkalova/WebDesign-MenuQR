@@ -145,31 +145,34 @@
       <div class="p-2"> </div>
     </div>
     <!--Редактиране на категория 1-->
-    <div class="d-flex flex-row justify-content-around flex-grow-1 collapse" id="collapseCat1">
+    <div class="d-flex flex-row justify-content-around flex-grow-1 ">
       <div class="p-2">
         <div class="card category1">
           <div class="cat1-main-body">
-            <img class="card-img-top-cat1" src="resources/edit-cat1-photo1.png" alt="Card image cap">
-            <div class="cat1-edit-fields">
-              <div class="fields cat1-edit">
-                <div class="menu-input-lb">Име</div>
-                <input type="text" class="form-control cat1-edit" id="inputNameCat" placeholder="Основни">
+            <form method="post">
+              <img class="card-img-top-cat1" src="resources/edit-cat1-photo1.png" alt="Card image cap">
+              <div class="cat1-edit-fields">
+
+                <div class="fields cat1-edit">
+                  <div class="menu-input-lb">Име</div>
+                  <input type="text" class="form-control cat1-edit" id="inputNameCat" placeholder="Основни">
+                </div>
+                <div class="cat-add-photo">
+                  <label for="formFile" class="menu-input-lb">Изображение</label>
+                  <label class="custom-input-photo cat1">
+                    Смени снимката
+                    <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="#777"
+                        d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                    </svg>
+                    <input id="file-upload" type="file" />
+                  </label>
+                  <div class="img-recommendation cat1">*Препоръчителен размер на снимката 1000px x 200px</div>
+                </div>
               </div>
-              <div class="cat-add-photo">
-                <label for="formFile" class="menu-input-lb">Изображение</label>
-                <label class="custom-input-photo cat1">
-                  Смени снимката
-                  <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
-                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="#777"
-                      d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
-                  </svg>
-                  <input id="file-upload" type="file" />
-                </label>
-                <div class="img-recommendation cat1">*Препоръчителен размер на снимката 1000px x 200px</div>
-              </div>
-            </div>
-            <button href="#" class="btn btn-primary btn-cat1">Запази</button>
+              <button class="btn btn-primary btn-cat1">Запази</button>
+            </form>
           </div>
 
           <div class="vr cat1"></div>
@@ -184,39 +187,40 @@
             <div class="card editing-product">
               <div class="product1-main-body">
                 <img class="card-img-top product1" src="resources/edit-cat1-photo2.png" alt="Card image cap">
-                <div class="card-body cat2-part1">
+                <form method="post">
+                  <div class="card-body cat2-part1">
+                    <div class="fields cat2-edit">
+                      <div class="menu-input-lb">Име</div>
+                      <input type="text" class="form-control cat2-edit" id="inputNameCat"
+                        placeholder="Пиле &quot;Фантазия&quot;">
+                    </div>
 
-                  <div class="fields cat2-edit">
-                    <div class="menu-input-lb">Име</div>
-                    <input type="text" class="form-control cat2-edit" id="inputNameCat"
-                      placeholder="Пиле &quot;Фантазия&quot;">
-                  </div>
+                    <div class="cat-add-photo">
+                      <label for="formFile" class="menu-input-lb">Изображение</label>
+                      <label class="custom-input-photo product1">
+                        Смени снимката
+                        <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
+                          preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                          <path fill="#777"
+                            d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                        </svg>
+                        <input id="file-upload" type="file" />
+                      </label>
+                      <div class="img-recommendation cat1">*Опционално</div>
+                    </div>
 
-                  <div class="cat-add-photo">
-                    <label for="formFile" class="menu-input-lb">Изображение</label>
-                    <label class="custom-input-photo product1">
-                      Смени снимката
-                      <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
-                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                        <path fill="#777"
-                          d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
-                      </svg>
-                      <input id="file-upload" type="file" />
-                    </label>
-                    <div class="img-recommendation cat1">*Опционално</div>
-                  </div>
+                    <div class="fields cat2-edit">
+                      <div class="menu-input-lb">Цена/в лв./</div>
+                      <input type="number" class="form-control cat2-edit" id="inputNameCat" placeholder="15.00">
+                    </div>
 
-                  <div class="fields cat2-edit">
-                    <div class="menu-input-lb">Цена/в лв./</div>
-                    <input type="number" class="form-control cat2-edit" id="inputNameCat" placeholder="15.00">
+                    <div class="fields cat2-edit">
+                      <div class="menu-input-lb">Количество/в гр./</div>
+                      <input type="text" class="form-control cat2-edit" id="inputNameCat" placeholder="250">
+                      <div class="img-recommendation cat1">*Опционално</div>
+                    </div>
                   </div>
-
-                  <div class="fields cat2-edit">
-                    <div class="menu-input-lb">Количество/в гр./</div>
-                    <input type="text" class="form-control cat2-edit" id="inputNameCat" placeholder="250">
-                    <div class="img-recommendation cat1">*Опционално</div>
-                  </div>
-                </div>
+                </form>
               </div>
               <div class="vr product"></div>
               <div class="card-body product-edit1">
@@ -242,6 +246,7 @@
                   <textarea class="form-control product-desc" rows="5" id="comment"></textarea>
                 </div>
               </div>
+
             </div>
 
             <div class="card product cat1">
@@ -296,28 +301,28 @@
         <div class="card category2">
           <img class="card-img-top-cat" src="resources/edit-cat2-img1.png" alt="Category image">
           <div class="card-body cat2-part1">
+            <form method="post">
+              <div class="fields cat2-edit">
+                <div class="menu-input-lb">Име</div>
+                <input type="text" class="form-control cat2-edit" id="inputNameCat" placeholder="Десерти">
+              </div>
 
-            <div class="fields cat2-edit">
-              <div class="menu-input-lb">Име</div>
-              <input type="text" class="form-control cat2-edit" id="inputNameCat" placeholder="Десерти">
-            </div>
-
-            <div class="cat-add-photo">
-              <label for="formFile" class="menu-input-lb">Изображение</label>
-              <label class="custom-input-photo cat2">
-                Смени снимката
-                <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
-                  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                  <path fill="#777"
-                    d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
-                </svg>
-                <input id="file-upload" type="file" />
-              </label>
-              <div class="img-recommendation">*Препоръчителен размер на снимката</div>
-              <div class="img-recommendation px">1000px x 200px</div>
-              <button class="btn btn-primary btn-cat">Запази</button>
-            </div>
-
+              <div class="cat-add-photo">
+                <label for="formFile" class="menu-input-lb">Изображение</label>
+                <label class="custom-input-photo cat2">
+                  Смени снимката
+                  <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon cat2" aria-hidden="true" role="img"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="#777"
+                      d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                  </svg>
+                  <input id="file-upload" type="file" />
+                </label>
+                <div class="img-recommendation">*Препоръчителен размер на снимката</div>
+                <div class="img-recommendation px">1000px x 200px</div>
+                <button class="btn btn-primary btn-cat">Запази</button>
+              </div>
+            </form>
           </div>
           <div class="vr"></div>
           <div class="card-body cat2-part2">
