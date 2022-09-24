@@ -10,8 +10,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+  <!--JS Files-->
+  <script src="./header.js" type="text/javascript" defer></script>
+  <script src="./footer.js" type="text/javascript" defer></script>
+
   <!--CSS -->
+  <link rel="stylesheet" type="text/css" href="header.css">
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
 
   <!--Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,40 +33,7 @@
     crossorigin="anonymous"></script>
 
   <!--Навигационно меню-->
-  <nav class="navbar navbar-expand-lg">
-    <div class="d-flex flex-row justify-content-around flex-grow-1">
-      <div class="p-2 ">
-        <img class="logo-img-header" src="logo-header.png" alt="Logo">
-      </div>
-      <div class="p-2 menu ">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Начало</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#restaurants">Ресторанти</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#menus">Менюта</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#payments">Сметки</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="p-2 logout-btn">
-        <button type="button" class="btn btn-success">Изход</button>
-      </div>
-
-    </div>
-  </nav>
-
+  <header-nav-menu></header-nav-menu>
   <!--Main content-->
   <div class="main-content">
     <!--Редактиране текст-->
@@ -92,56 +65,61 @@
             </svg>
           </div>
           <div class="card-body">
-            <div class="fields">
-              <div class="menu-input-lb">Име</div>
-              <input type="text" class="form-control" id="inputName" placeholder="Вашето меню">
-            </div>
-            <div class="fields">
-              <div class="menu-input-lb">Език</div>
-              <input type="text" class="form-control" id="inputLanguage" placeholder="Български">
-            </div>
-            <div class="fields">
-              <div class="menu-input-lb">Ресторант/име/</div>
-              <input type="text" class="form-control" id="inputRestaurantName" placeholder="Рафи">
-            </div>
-            <a href="#" class="btn btn-primary save-btn">Запази</a>
+            <form method="post">
+              <div class="fields">
+                <div class="menu-input-lb">Име</div>
+                <input type="text" class="form-control" id="inputName" placeholder="Вашето меню">
+              </div>
+              <div class="fields">
+                <div class="menu-input-lb">Език</div>
+                <input type="text" class="form-control" id="inputLanguage" placeholder="Български">
+              </div>
+              <div class="fields">
+                <div class="menu-input-lb">Ресторант/име/</div>
+                <input type="text" class="form-control" id="inputRestaurantName" placeholder="Рафи">
+              </div>
+              <button class="btn btn-primary save-btn">Запази</button>
+            </form>
           </div>
         </div>
       </div>
       <!--Добавяне на категория-->
       <div class="p-2 add-category ">
-        <div class="edit-menu-header-txt">Добавяне на катефория</div>
+        <div class="edit-menu-header-txt">Добавяне на категория</div>
         <div class="card add-category">
-          <img src="category-img.png" class="card-img-top" alt="Изображение на категорията">
+          <img src="resources/category-img.png" class="card-img-top" alt="Изображение на категорията">
           <div class="card-body">
-            <div class="fields">
-              <div class="menu-input-lb">Име</div>
-              <input type="text" class="form-control" id="inputNameCat" placeholder="Въведете име на категорията">
-            </div>
-            <div>
-              <div class="cat-add-photo">
-                <label for="formFile" class="menu-input-lb">Изображение</label>
-                <label class="custom-input-photo">
-                  Добави снимка
-                  <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon" aria-hidden="true" role="img"
-                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="#777"
-                      d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
-                  </svg>
-                  <input id="file-upload" type="file" />
-                </label>
+            <form method="post">
+              <div class="fields">
+                <div class="menu-input-lb">Име</div>
+                <input type="text" class="form-control" id="inputNameCat" placeholder="Въведете име на категорията">
               </div>
-            </div>
-            <div class="add-more-cat-btn">
-              <a class="btn add-cat">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
-                  viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
-                </svg>
-                Добави още категории</a>
-            </div>
-            <a href="#" class="btn btn-primary btn-cat">Добави</a>
+              <div>
+                <div class="cat-add-photo">
+                  <label for="formFile" class="menu-input-lb">Изображение</label>
+                  <label class="custom-input-photo">
+                    Добави снимка
+                    <svg xmlns="http://www.w3.org/2000/svg" class="img-add-icon" aria-hidden="true" role="img"
+                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="#777"
+                        d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4l2 3l3-4l4 5H5z" />
+                    </svg>
+                    <input id="file-upload" type="file" />
+                  </label>
+                </div>
+              </div>
+              <div class="add-more-cat-btn">
+                <a class="btn add-cat">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                  </svg>
+                  Добави още категории
+                </a>
+              </div>
+              <button class="btn btn-primary btn-cat">Добави</button>
+            </form>
           </div>
 
         </div>
@@ -167,11 +145,11 @@
       <div class="p-2"> </div>
     </div>
     <!--Редактиране на категория 1-->
-    <div class="d-flex flex-row justify-content-around flex-grow-1">
+    <div class="d-flex flex-row justify-content-around flex-grow-1 collapse" id="collapseCat1">
       <div class="p-2">
         <div class="card category1">
           <div class="cat1-main-body">
-            <img class="card-img-top-cat1" src="edit-cat1-photo1.png" alt="Card image cap">
+            <img class="card-img-top-cat1" src="resources/edit-cat1-photo1.png" alt="Card image cap">
             <div class="cat1-edit-fields">
               <div class="fields cat1-edit">
                 <div class="menu-input-lb">Име</div>
@@ -191,7 +169,7 @@
                 <div class="img-recommendation cat1">*Препоръчителен размер на снимката 1000px x 200px</div>
               </div>
             </div>
-            <a href="#" class="btn btn-primary btn-cat1">Запази</a>
+            <button href="#" class="btn btn-primary btn-cat1">Запази</button>
           </div>
 
           <div class="vr cat1"></div>
@@ -200,12 +178,12 @@
 
             <div class="products-lb">
               <div class="menu-input-lb products-lb">Продукти</div>
-              <a href="#" class="btn btn-primary btn-cat">Добави</a>
+              <button class="btn btn-primary btn-cat">Добави</button>
             </div>
 
             <div class="card editing-product">
               <div class="product1-main-body">
-                <img class="card-img-top product1" src="edit-cat1-photo2.png" alt="Card image cap">
+                <img class="card-img-top product1" src="resources/edit-cat1-photo2.png" alt="Card image cap">
                 <div class="card-body cat2-part1">
 
                   <div class="fields cat2-edit">
@@ -267,7 +245,7 @@
             </div>
 
             <div class="card product cat1">
-              <img class="card-img-top-pr" src="edit-cat1-photo3.png" alt="Product image">
+              <img class="card-img-top-pr" src="resources/edit-cat1-photo3.png" alt="Product image">
               <div class="card-body">
                 <div class="cat-product-name">Тестов продукт</div>
 
@@ -316,7 +294,7 @@
     <div class="d-flex flex-row justify-content-around flex-grow-1">
       <div class="p-2">
         <div class="card category2">
-          <img class="card-img-top-cat" src="edit-cat2-img1.png" alt="Category image">
+          <img class="card-img-top-cat" src="resources/edit-cat2-img1.png" alt="Category image">
           <div class="card-body cat2-part1">
 
             <div class="fields cat2-edit">
@@ -337,7 +315,7 @@
               </label>
               <div class="img-recommendation">*Препоръчителен размер на снимката</div>
               <div class="img-recommendation px">1000px x 200px</div>
-              <a href="#" class="btn btn-primary btn-cat">Запази</a>
+              <button class="btn btn-primary btn-cat">Запази</button>
             </div>
 
           </div>
@@ -345,11 +323,11 @@
           <div class="card-body cat2-part2">
             <div class="products-lb">
               <div class="menu-input-lb products-lb">Продукти</div>
-              <a href="#" class="btn btn-primary btn-cat">Добави</a>
+              <button class="btn btn-primary btn-cat">Добави</button>
             </div>
 
             <div class="card product">
-              <img class="card-img-top-pr" src="cat2-pr1.png" alt="Product image">
+              <img class="card-img-top-pr" src="resources/cat2-pr1.png" alt="Product image">
               <div class="card-body">
                 <div class="cat-product-name">Тирамису</div>
 
@@ -399,23 +377,7 @@
     </div>
   </div>
   <!------Footer-------->
-  <footer class="footer">
-    <div class="d-flex footer-container flex-row justify-content-around  flex-grow-1">
-      <div class="p-2 ">
-        <img class="logo-img-header" src="logo-footer.png" alt="Logo">
-      </div>
-      <div class="p-2 menu-footer">
-        <a href="#home">Начало</a>
-        <a href="#restaurants">Ресторанти</a>
-        <a href="#menus">Менюта</a>
-        <a href="#payments">Сметки</a>
-      </div>
-      <div class="p-2 copyright-txt">
-        &copy; 2022 QRMENU Всички права запазени
-      </div>
-    </div>
-
-  </footer>
+  <footer-menu></footer-menu>
 </body>
 
 </html>

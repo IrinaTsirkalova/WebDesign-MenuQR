@@ -1,0 +1,64 @@
+/*---------------Header------------------------------*/
+.navbar {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10000000149011612);
+    height: 65px;
+}
+
+.navbar-nav {
+    --bs-navbar-color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.navbar .nav-item:hover .nav-link {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #a8da9d;
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #a8da9d;
+    text-decoration-thickness: 2px;
+    font-weight: 400;
+
+}
+
+.logo-img-header {
+    width: 75px;
+    height: 42px;
+    margin-left: 50px;
+}
+
+.p-2.menu {
+    margin-right: 500px;
+}
+
+.btn {
+    --bs-btn-bg: background-color:rgba(255, 255, 255, 0);
+    --bs-btn-color: rgba(0, 0, 0, 1);
+    --bs-btn-border-color: rgba(156.00000590085983, 213.00000250339508, 144.00000661611557, 1);
+    --bs-btn-hover-bg: #a8da9d;
+    --bs-btn-hover-border-color: #a8da9d;
+    --bs-btn-active-bg: #a8da9d;
+    --bs-btn-active-border-color: #a8da9d;
+    --bs-btn-border-radius: 100px;
+    --bs-btn-line-height: 0.90;
+    --bs-btn-border-width: 1.5px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    padding: 8px 0;
+    height: 33px;
+    width: 90px;
+}
+
+.p-2.logout-btn {
+    margin-top: 5px;
+    margin-right: 80px;
+}
+

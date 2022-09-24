@@ -1,0 +1,30 @@
+/*----------Footer---------------*/
+.footer {
+    width: 100%;
+    height: 105px;
+    background-color: #FF003C;
+}
+
+div.d-flex.footer-container {
+    margin-top: 10px;
+}
+
+div.menu-footer {
+    margin-right: 122px;
+}
+
+div.p-2.menu-footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+div.p-2.copyright-txt {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
