@@ -1,6 +1,10 @@
 # MenuQR
 Redesign of Menu page on https://xqrmenu.com/ 
 
+**Technologies used:**
+
+- Bootstrap 5
+
 **Figma prototype link:** [click here](https://www.figma.com/proto/yhK7tadCjjHLEyjVgu177g/Menu-QR?node-id=13%3A333)
 
 **Screenshot of the redesign visualized on a 1519.200x343.200 screen:**
